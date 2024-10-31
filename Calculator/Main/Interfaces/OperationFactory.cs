@@ -3,10 +3,10 @@ using Calculator.Main.Enumerators;
 
 namespace Calculator.Main.Interfaces
 {
-    public class OperationFactory
+    public static class OperationFactory
     {
         //The factory that creates a new operations in which operation is selected in the OperationType 
-        public IOperation? CreateOperation(OperationType operation)
+        public static IOperation CreateOperation(OperationType operation)
         {
             switch (operation)
             {
