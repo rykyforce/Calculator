@@ -39,14 +39,29 @@ class Program
         Console.WriteLine("Please select an option:");
         Console.WriteLine("" +
             "1. Operation\n" +
-            "2. Help\n" +
-            "3. Exit\n" +
+            "2. Exit\n" +
             "");
         string? response = Console.ReadLine();
         if (response != null) 
         {
+            switch (response)
+            {
+                case "1":
+                    CurrentState = State.Operation;
+                    break;
+
+                case "2":
+                    Environment.Exit(0);
+                    break;
+
+                default:
+
+                    break;
+            }
+            if (response == "1")
+            {
+            }
             Console.WriteLine(response);
-            CurrentState = State.Operation;
 
         }
 
